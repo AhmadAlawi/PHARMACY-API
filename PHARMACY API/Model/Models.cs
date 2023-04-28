@@ -1,4 +1,6 @@
-﻿namespace PHARMACY_API.Model
+﻿using Org.BouncyCastle.Asn1.Crmf;
+
+namespace PHARMACY_API.Model
 {
     public class Models
     {
@@ -23,6 +25,18 @@
             public string Password { get; set; }
             public string Email { get; set; }
             public string Role { get; set; }
+        }
+
+        public class CheckotpModel
+        {
+            public string Username { get; set; }
+            public int OTP { get; set; }
+
+        }
+
+        public class NewOtpModel
+        {
+            public string Username { get; set; }
         }
     }
 }
